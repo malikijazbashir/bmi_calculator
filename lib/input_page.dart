@@ -16,6 +16,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectgender;
+  int sliderheight=180;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,7 @@ class _InputPageState extends State<InputPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('180',
+                  Text(sliderheight.toString(),
                     style: knumberstyle,),
                   Text('cm',style: klablestyle,)
 
