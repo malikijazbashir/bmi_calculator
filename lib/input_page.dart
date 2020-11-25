@@ -6,6 +6,10 @@ import 'RepeatContainerFile.dart';
 
 const activeColor=Color(0xFF1D1E33);
 const deactiveColor=Color(0xFF111328);
+enum Gender{
+  male,
+  female,
+}
 
 class InputPage extends StatefulWidget {
   @override
@@ -16,14 +20,14 @@ class _InputPageState extends State<InputPage> {
 
   Color malecolor=deactiveColor;
   Color femalecolor=deactiveColor;
-  void UpdateColor(int gender)
+  void UpdateColor(Gender gendertype)
   {
-if(gender==1)
+if(gendertype==Gender.male)
   {
     malecolor=activeColor;
     femalecolor=deactiveColor;
   }
-if(gender==2)
+if(gendertype==Gender.female)
   {
     malecolor=deactiveColor;
     femalecolor=activeColor;
@@ -43,7 +47,7 @@ if(gender==2)
                   child: GestureDetector(
                     onTap: (){
                       setState((){
-                        UpdateColor(1);
+                        UpdateColor(Gender.male);
                       });
                     },
                     child: RepeatContainerCode(colors: malecolor,
@@ -57,7 +61,7 @@ if(gender==2)
               Expanded(child: GestureDetector(
                 onTap: (){
                   setState(() {
-                    UpdateColor(2);
+                    UpdateColor(Gender.female);
                   });
                 },
                 child: RepeatContainerCode(colors: femalecolor,
