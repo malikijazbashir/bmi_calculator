@@ -18,6 +18,7 @@ class _InputPageState extends State<InputPage> {
   Gender selectgender;
   int sliderheight=180;
   int genderWeight=60;
+  int genderAge=20;
 
   @override
   Widget build(BuildContext context) {
@@ -132,8 +133,8 @@ class _InputPageState extends State<InputPage> {
                 cardWidget: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('WEIGHT',style: klablestyle,),
-                    Text(genderWeight.toString(),style: knumberstyle,),
+                    Text('AGE',style: klablestyle,),
+                    Text(genderAge.toString(),style: knumberstyle,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -141,7 +142,7 @@ class _InputPageState extends State<InputPage> {
                           iconData: FontAwesomeIcons.minus,
                           onPress: (){
                             setState(() {
-                              genderWeight--;
+                              genderAge--;
                             });
                           },
                         ),
@@ -150,7 +151,7 @@ class _InputPageState extends State<InputPage> {
                           iconData: FontAwesomeIcons.plus,
                           onPress: (){
                             setState(() {
-                              genderWeight++;
+                              genderAge++;
                             });
                           },
 
