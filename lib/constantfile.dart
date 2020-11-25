@@ -9,3 +9,20 @@ const knumberstyle=TextStyle(
   fontWeight: FontWeight.w900,
 );
 const klargeButtonstyle=TextStyle(fontSize: 25.0,fontWeight: FontWeight.bold,);
+const ktitleStyle=TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+const kresultTextStyle=TextStyle(
+  fontSize: 20.0,
+  color: Colors.lightGreen,
+  fontWeight: FontWeight.normal,
+);
+const kBMITextStyle=TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+const kbodyTextStyle=TextStyle(
+  fontSize: 16.0,
+  fontWeight: FontWeight.normal,
+);
