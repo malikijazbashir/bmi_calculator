@@ -99,7 +99,13 @@ class _InputPageState extends State<InputPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text('WEIGHT',style: klablestyle,),
-                    Text(genderWeight.toString(),style: klablestyle,),
+                    Text(genderWeight.toString(),style: knumberstyle,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+
+                      ],
+                    )
                   ],
                 ),
               )),
