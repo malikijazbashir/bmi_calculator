@@ -47,6 +47,11 @@ class _InputPageState extends State<InputPage> {
               Expanded(
 
                     child: RepeatContainerCode(
+                      onPressed: (){
+                        setState(() {
+                          selectgender=Gender.male;
+                        });
+                      },
                       colors: selectgender==Gender.male?activeColor:deactiveColor,
                     cardWidget: RepeatCardWidget(
                       iconData: FontAwesomeIcons.male,
@@ -56,7 +61,13 @@ class _InputPageState extends State<InputPage> {
 
               ),
               Expanded(
-                child: RepeatContainerCode(colors: selectgender==Gender.female?activeColor:deactiveColor,
+                child: RepeatContainerCode(
+                  onPressed: (){
+                    setState(() {
+                      selectgender=Gender.female;
+                    });
+                  },
+                  colors: selectgender==Gender.female?activeColor:deactiveColor,
                   cardWidget: RepeatCardWidget(
                     iconData: FontAwesomeIcons.female,
                     label: 'FEMALE',
