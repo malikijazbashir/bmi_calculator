@@ -17,22 +17,23 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-
-  Color malecolor=deactiveColor;
-  Color femalecolor=deactiveColor;
-  void UpdateColor(Gender gendertype)
-  {
-if(gendertype==Gender.male)
-  {
-    malecolor=activeColor;
-    femalecolor=deactiveColor;
-  }
-if(gendertype==Gender.female)
-  {
-    malecolor=deactiveColor;
-    femalecolor=activeColor;
-  }
-  }
+  Gender selectgender;
+//
+//   Color malecolor=deactiveColor;
+//   Color femalecolor=deactiveColor;
+//   void UpdateColor(Gender gendertype)
+//   {
+// if(gendertype==Gender.male)
+//   {
+//     malecolor=activeColor;
+//     femalecolor=deactiveColor;
+//   }
+// if(gendertype==Gender.female)
+//   {
+//     malecolor=deactiveColor;
+//     femalecolor=activeColor;
+//   }
+//   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,10 +48,11 @@ if(gendertype==Gender.female)
                   child: GestureDetector(
                     onTap: (){
                       setState((){
-                        UpdateColor(Gender.male);
+                        selectgender=Gender.male;
                       });
                     },
-                    child: RepeatContainerCode(colors: malecolor,
+                    child: RepeatContainerCode(
+                      colors: selectgender==Gender.male?activeColor:deactiveColor,
                     cardWidget: RepeatCardWidget(
                       iconData: FontAwesomeIcons.male,
                       label: 'MALE',
@@ -61,10 +63,10 @@ if(gendertype==Gender.female)
               Expanded(child: GestureDetector(
                 onTap: (){
                   setState(() {
-                    UpdateColor(Gender.female);
+                    selectgender=Gender.female;
                   });
                 },
-                child: RepeatContainerCode(colors: femalecolor,
+                child: RepeatContainerCode(colors: selectgender==Gender.female?activeColor:deactiveColor,
                   cardWidget: RepeatCardWidget(
                     iconData: FontAwesomeIcons.female,
                     label: 'FEMALE',
