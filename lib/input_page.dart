@@ -45,12 +45,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(child: Row(
             children: <Widget>[
               Expanded(
-                  child: GestureDetector(
-                    onTap: (){
-                      setState((){
-                        selectgender=Gender.male;
-                      });
-                    },
+
                     child: RepeatContainerCode(
                       colors: selectgender==Gender.male?activeColor:deactiveColor,
                     cardWidget: RepeatCardWidget(
@@ -58,20 +53,15 @@ class _InputPageState extends State<InputPage> {
                       label: 'MALE',
                     ),
                     ),
-                  )
+
               ),
-              Expanded(child: GestureDetector(
-                onTap: (){
-                  setState(() {
-                    selectgender=Gender.female;
-                  });
-                },
+              Expanded(
                 child: RepeatContainerCode(colors: selectgender==Gender.female?activeColor:deactiveColor,
                   cardWidget: RepeatCardWidget(
                     iconData: FontAwesomeIcons.female,
                     label: 'FEMALE',
                   ),),
-              )),
+              )
             ],
           )),
           Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
