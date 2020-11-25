@@ -103,13 +103,64 @@ class _InputPageState extends State<InputPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        RoundIcon(
+                          iconData: FontAwesomeIcons.minus,
+                        onPress: (){
+                            setState(() {
+                              genderWeight--;
+                            });
+                        },
+                        ),
+                        SizedBox(width: 10.0),
+                        RoundIcon(
+                          iconData: FontAwesomeIcons.plus,
+                          onPress: (){
+                            setState(() {
+                              genderWeight++;
+                            });
+                          },
+
+                        )
+
 
                       ],
                     )
                   ],
                 ),
               )),
-              Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
+              Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),
+                cardWidget: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('WEIGHT',style: klablestyle,),
+                    Text(genderWeight.toString(),style: knumberstyle,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        RoundIcon(
+                          iconData: FontAwesomeIcons.minus,
+                          onPress: (){
+                            setState(() {
+                              genderWeight--;
+                            });
+                          },
+                        ),
+                        SizedBox(width: 10.0),
+                        RoundIcon(
+                          iconData: FontAwesomeIcons.plus,
+                          onPress: (){
+                            setState(() {
+                              genderWeight++;
+                            });
+                          },
+
+                        )
+
+
+                      ],
+                    )
+                  ],
+                ),)),
             ],
           )),
         ],
