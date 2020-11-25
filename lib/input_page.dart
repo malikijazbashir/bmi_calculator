@@ -62,8 +62,18 @@ class _InputPageState extends State<InputPage> {
           Expanded(child: new RepeatContainerCode(
             colors: Color(0xFF1D1E33),
           cardWidget: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('HEIGHT',style: klablestyle,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text('180',
+                    style: knumberstyle,),
+                  Text('cm',style: klablestyle,)
+
+                ],
+              ),
             ],
           ),
           )),
