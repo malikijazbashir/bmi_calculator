@@ -2,7 +2,12 @@ import 'package:bmi_calculator/RepeatContainerFile.dart';
 import 'package:flutter/material.dart';
 import 'constantfile.dart';
 import 'input_page.dart';
+import 'calculatorFile.dart';
 class ResultScreen extends StatelessWidget {
+  ResultScreen({@required this.bmiResult,this.resultText,this.interperation});
+  final String bmiResult;
+  final String resultText;
+  final String interperation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +33,9 @@ class ResultScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('Normal',style: kresultTextStyle,),
-                  Text('18.3',style: kBMITextStyle,),
-                  Text('BMI is low you should move to work more',style: kbodyTextStyle,),
+                  Text(resultText.toUpperCase(),style: kresultTextStyle,),
+                  Text(bmiResult,style: kBMITextStyle,),
+                  Text(interperation,style: kbodyTextStyle,),
                 ],
 
               ),
@@ -46,7 +51,7 @@ class ResultScreen extends StatelessWidget {
                   color: Color(0xFFEB1555),
                   margin: EdgeInsets.only(top:10.0),
                   width: double.infinity,
-                  height: 60.0,
+                  height: 80.0,
                 ),
               ),
           ),
