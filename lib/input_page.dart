@@ -19,10 +19,17 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                   child: new RepeatContainerCode(colors: Color(0xFF1D1E33),
-                  cardWidget: RepeatCardWidget(),
+                  cardWidget: RepeatCardWidget(
+                    iconData: FontAwesomeIcons.male,
+                    label: 'MALE',
+                  ),
                   )
               ),
-              Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
+              Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),
+                cardWidget: RepeatCardWidget(
+                  iconData: FontAwesomeIcons.male,
+                  label: 'FEMALE',
+                ),)),
             ],
           )),
           Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
@@ -40,6 +47,9 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RepeatCardWidget extends StatelessWidget {
+  RepeatCardWidget({@required this.iconData,this.label});
+  final IconData iconData;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +57,14 @@ class RepeatCardWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Icon(
-          FontAwesomeIcons.male,
+          iconData,
           size:80.0,
         ),
         SizedBox(
           height: 15.0,
         ),
         Text(
-          'Male',
+          label,
           style: TextStyle(fontSize: 18.0,color: Color(0xFF8D8E98)),
         ),
       ],
