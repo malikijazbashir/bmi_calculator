@@ -4,9 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'IconsTextFIle.dart';
 import 'RepeatContainerFile.dart';
 import 'constantfile.dart';
-
-const activeColor=Color(0xFF1D1E33);
-const deactiveColor=Color(0xFF111328);
 enum Gender{
   male,
   female,
