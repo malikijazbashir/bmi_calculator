@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constantfile.dart';
 class RepeatCardWidget extends StatelessWidget {
   RepeatCardWidget({@required this.iconData,this.label});
   final IconData iconData;
@@ -11,14 +12,14 @@ class RepeatCardWidget extends StatelessWidget {
       children: <Widget>[
         Icon(
           iconData,
-          size:80.0,
+          size:85.0,
         ),
         SizedBox(
-          height: 15.0,
+          height: 20.0,
         ),
         Text(
           label,
-          style: TextStyle(fontSize: 18.0,color: Color(0xFF8D8E98)),
+          style:klablestyle ,
         ),
       ],
     );

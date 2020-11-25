@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'IconsTextFIle.dart';
 import 'RepeatContainerFile.dart';
+import 'constantfile.dart';
 
 const activeColor=Color(0xFF1D1E33);
 const deactiveColor=Color(0xFF111328);
@@ -18,22 +19,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectgender;
-//
-//   Color malecolor=deactiveColor;
-//   Color femalecolor=deactiveColor;
-//   void UpdateColor(Gender gendertype)
-//   {
-// if(gendertype==Gender.male)
-//   {
-//     malecolor=activeColor;
-//     femalecolor=deactiveColor;
-//   }
-// if(gendertype==Gender.female)
-//   {
-//     malecolor=deactiveColor;
-//     femalecolor=activeColor;
-//   }
-//   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +27,7 @@ class _InputPageState extends State<InputPage> {
        title: Text('BMI Calculator App'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(child: Row(
             children: <Widget>[
@@ -75,7 +62,14 @@ class _InputPageState extends State<InputPage> {
               )
             ],
           )),
-          Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
+          Expanded(child: new RepeatContainerCode(
+            colors: Color(0xFF1D1E33),
+          cardWidget: Column(
+            children: <Widget>[
+              Text('HEIGHT',style: klablestyle,),
+            ],
+          ),
+          )),
           Expanded(child: Row(
             children: <Widget>[
               Expanded(child: new RepeatContainerCode(colors: Color(0xFF1D1E33),)),
